@@ -47,7 +47,7 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 
 ### Add deinterlace, $deinterlace default is "yadif=0:-1"
 
-	$ffmepg_builder->add_vf_split(deinterlace => $deinterlace);
+	$ffmpeg_builder->add_vf_split(deinterlace => $deinterlace);
 
 ### Add split output 
 
