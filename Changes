@@ -1,0 +1,6 @@
+Revision history for Perl extension FFmpeg::Syntax::Builder.
+
+0.01  Sat May 30 01:07:43 2015
+	- original version; created by h2xs 1.23 with options
+		-XA -n FFmpeg::Syntax::Builder
+

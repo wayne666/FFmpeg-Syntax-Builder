@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/FFmpeg-Syntax-Builder.t
+lib/FFmpeg/Syntax/Builder.pm
