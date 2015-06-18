@@ -15,6 +15,8 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 	
 	my $ffmpeg_builder = FFmpeg::Syntax::Builder->new();
 
+### add_input function
+
 #### Support mutiple inputs like udp, rtmp, file(localfile), stdin(bmdcapture)
 
 	$ffmpeg_builder->add_input(stdin); # you can assign your sid_port and sid_mode
@@ -29,7 +31,7 @@ A simple ffmpeg command line untility, make ffmpeg command easier
   
 	$ffmpeg_builder->add_input(watermark  => {filepath => '/tmp/xxx.jpeg'});
 
-#### Support multiple outputs, you should use split 
+### Support multiple outputs, you should use add_vf_split
 
 #### use channel_id to distinguish different channel live
 
@@ -52,6 +54,8 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 #### Add split output 
 
 	$ffmpeg_builder->add_vf_split(output_count => $output_count);
+
+### add_vf function add video filter
 
 #### Add fps (frame per seconds), default is 25
 
@@ -88,6 +92,8 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 
 	$ffmpeg_builder->add_vf_split(ip  => {channel_id => $channel_id}); # [$channel_id:0]
 
+### add_af function add audio codec
+
 #### Add mono
 
 	$ffmpeg_builder->add_af('mono');
@@ -105,7 +111,12 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 	$ffmpeg_builder->add_af(audio_delay => {audio_delay_msecs => 15});
 
 #### Add output count
-$ffmpeg_builder->add_af(output_count => 1); #### Add output $ffmepg_builder->add_output('map_av'); #### Add codec video x264opts
+
+$ffmpeg_builder->add_af(output_count => 1); 
+
+### add_output function add output type
+
+#### Add output $ffmepg_builder->add_output('map_av'); #### Add codec video x264opts
 
 	$ffmpeg_builder->add_output(codec_video => {x264opts => $x264opts});
 
