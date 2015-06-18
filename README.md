@@ -15,7 +15,7 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 	
 	my $ffmpeg_builder = FFmpeg::Syntax::Builder->new();
 
-### Support varity of inputs like udp, rtmp, file(localfile), stdin(bmdcapture)
+#### Support mutiple inputs like udp, rtmp, file(localfile), stdin(bmdcapture)
 
 	$ffmpeg_builder->add_input(stdin); # you can assign your sid_port and sid_mode
 	
@@ -25,7 +25,7 @@ A simple ffmpeg command line untility, make ffmpeg command easier
 	
 	$ffmpeg_builder->add_input(file  => {filepath => $local_file_path});
 
-### Add watermark file
+#### Add watermark file
   
 	$ffmpeg_builder->add_input(watermark  => {filepath => '/tmp/xxx.jpeg'});
 
